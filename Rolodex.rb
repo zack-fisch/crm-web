@@ -1,7 +1,7 @@
 class Rolodex
 
-	attr_reader :contacts
-	
+	attr_reader :contacts, :id
+
 	def initialize
 		@contacts = []
 		@id = 1000
