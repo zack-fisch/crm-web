@@ -7,6 +7,19 @@ get '/' do
 end
 
 get '/contacts' do
-	"This is where the contacts should be."
 	erb :contacts
 end
+
+get '/contacts/new' do
+	erb :add_contact
+end
+
+get '/contacts/:id' do
+	erb :specific_contact
+end
+
+get '/contacts/:id/edit' do
+	erb :edit_specific_contact
+end 
+
+
