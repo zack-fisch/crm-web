@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative 'contact'
 
 get '/' do
 	@crm_app_name = "My CRM"
@@ -21,5 +22,6 @@ end
 get '/contacts/:id/edit' do
 	erb :edit_specific_contact
 end 
+
 
 
