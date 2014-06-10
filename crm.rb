@@ -8,4 +8,5 @@ end
 
 get '/contacts' do
 	"This is where the contacts should be."
+	erb :contacts
 end
