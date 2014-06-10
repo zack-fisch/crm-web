@@ -1,1 +1,11 @@
-<p>This is where the contacts should be</p>
+<h1>This is where the contacts should be</h1>
+
+<h1>All Contacts</h1>
+
+<ul>
+<% @contacts.each do |contact| %>
+	<li><%= contact.first_name %> <%= contact.last_name %></li>
+<% end %>
+
+
+</ul>
