@@ -2,13 +2,25 @@
 <html>
 
 	<head>
-		<title>A Special CRM</title>
+		<title>A Special CRM app</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
+
+	<header>
+			<h1>Welcome to <%= @@crm_app_name %></h1> 
+	</header>
 
 	<body>
 		<%= yield %>
 
 	</body>
+
+	<footer> 
+		<nav>
+			<a href="/">Home</a>
+			<a href="http://www.zfisch.com">Exit</a>
+		</nav>
+	</footer>
 
 
 </html>

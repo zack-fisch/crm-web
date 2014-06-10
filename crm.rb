@@ -1,12 +1,14 @@
-require 'sinatra'
 require_relative 'contact'
 require_relative 'rolodex'
 
+require 'sinatra'
+
 @@rolodex = Rolodex.new 
+
+@@crm_app_name = "Zack's CRM" #lol.
 
 #Routes start here
 get '/' do
-	@crm_app_name = "My CRM"
 	@time = Time.now
 	erb :index
 end
