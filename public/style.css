@@ -85,10 +85,21 @@ a:hover {
 /* End of add Contact */
 
 #contactlist {
-	list-style-type: none;
+	 list-style-type: none;
 }
 
 /*Start of List Contacts */
+
+#contactcards {
+	width: 200px;
+	height: 100px;
+	background-color: rgba(52, 152, 219, .7);
+	display: inline-block;
+	margin-top: 10px;
+	text-align: center;
+	opacity: .7;
+
+}
 
 
 
