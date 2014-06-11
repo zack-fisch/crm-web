@@ -6,7 +6,7 @@ require 'sinatra'
 @@rolodex = Rolodex.new
 @@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
 
-@@crm_app_name = "Zack's CRM" #haha
+@@crm_app_name = "Rolo"
 
 #Routes start here
 get '/' do

@@ -5,16 +5,18 @@
 }
 
 body {
-	margin: 1rem 0;
+	margin: 0;
 }
 
 header {
 	height: 70px;
 	width: 100%;
+	background-color: slategray;
+	opacity: .7;
 }
 
 h1 {
-	color: blue;
+	color: white;
 	opacity: .7;
 	padding-left: .5em;
 	margin: 0 auto;
@@ -25,8 +27,9 @@ h1 {
 
 h2 {
 	text-align: center;
-	color: blue;
-	opacity: .7;
+	color: black;
+	opacity: .5;
+	min-width: 600px;
 }
 
 nav {
@@ -76,7 +79,7 @@ input:hover, button:hover {
 }
 
 a {
-	color: blue;
+	color: white;
 	opacity: .7;
 	text-decoration: none;
 	transition: color 2s ease;
@@ -87,22 +90,38 @@ a:hover {
 }
 /* End of add Contact */
 
-#contactlist {
-	 list-style-type: none;
-}
 
-/*Start of List Contacts */
+/* Start of List Contacts */
 
-#contactcards {
+.contactcards {
 	width: 200px;
 	height: 100px;
-	background-color: rgba(52, 152, 219, .7);
+	background-color: slategray;
 	display: inline-block;
 	margin-top: 30px;
 	text-align: center;
 	opacity: .7;
 	margin-left: 30px;
+	list-style-type: none;
+	color: white;
+}
 
+/* End List of Contacts */
+
+/* Start display indvidiual contact */
+
+#contact_center {
+	width: 200px;
+	height: 100px;
+	background-color: slategray;
+	display: inline-block;
+	margin-top: 30px;
+	text-align: center;
+	margin-left: 40%;
+	list-style-type: none;
+	min-width: 60px;
+	color: white;
+	opacity: .7;
 }
 
 

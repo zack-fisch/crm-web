@@ -1,8 +1,8 @@
 <h2>All Contacts</h2>
 
-<ul id="contactlist">
+<ul>
 <% @@rolodex.contacts.each do |contact| %>
-	<div id="contactcards">
+	<div class="contactcards">
 		<li><%= contact.first_name %> <%= contact.last_name %> <hr> <%= contact.email %> <br> Note: <%= contact.note %> <br> ID: <%= contact.id %></li>
 	</div>
 
