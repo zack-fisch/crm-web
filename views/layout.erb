@@ -4,26 +4,23 @@
 	<head>
 		<title>A Special CRM app</title>
 		<link rel="stylesheet" type="text/css" href="<%= url("/style.css")%>">
-		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 	
 	</head>
 
 	<header>
 			<h1>Welcome to <%= @@crm_app_name %></h1> 
+			<nav>
+				<a href="/contacts/new">Add Contact</a>
+				<a href="/contacts/:id"> Search</a>
+				<a href="/contacts/:id/edit">Edit Contact</a>
+				<a href="http://www.zfisch.com" class="">Exit</a>
+			</nav>
 	</header>
 
 	<body>
 		<%= yield %>
 
 	</body>
-
-	<footer> 
-		<nav>
-			<a href="/">Home</a>
-			<a href="http://www.zfisch.com">Exit</a>
-		</nav>
-	</footer>
-
 
 </html>

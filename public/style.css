@@ -1,30 +1,94 @@
+/* Throughout Document Style */
+* {
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	margin: 1rem 0;
+}
+
+header {
+	height: 70px;
+	width: 100%;
+}
+
 h1 {
 	color: blue;
 	opacity: .7;
 	padding-left: .5em;
 	margin: 0 auto;
-}
-
-header {
-	height: 40px;
-	background-color: #1689FF;
-	width: 150%;
-	border-radius: 5px;
-	position: relative;
-	margin-top: -23px;
-	margin-left: -10px;
-}
-
-.pure-input-1-2 {
+	margin-left: -13px;
 	text-align: center;
 }
 
+h2 {
+	text-align: center;
+	color: blue;
+	opacity: .7;
+}
 
-/*
-form {
-	position: relative;
-  width: 600px;
-  margin: 0 auto;
-  display: block;
-} */ 
+nav {
+	text-align: center;
+	margin-top: 10px;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+nav > a {
+	padding-left: 25px;
+}
+
+/* End of Throughout Styles */
+
+/* Add Contacts erb */
+
+input, button {
+	display: block;
+	padding: 10px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-size: 16px;
+	border: 2px solid gray;
+}
+
+button:hover {
+	opacity: .7;
+	background-color: #ecf0f1;
+
+}
+
+input:focus, button:focus{
+	border: 2px solid blue;
+}
+
+input:hover, button:hover {
+	cursor: pointer;
+}
+
+#container {
+	width: 500px;
+	margin: auto;
+}
+
+a {
+	color: blue;
+	opacity: .7;
+	text-decoration: none;
+	transition: color 2s ease;
+}
+
+a:hover {
+		color: black;
+}
+/* End of add Contact */
+
+#contactlist {
+	list-style-type: none;
+}
+
+/*Start of List Contacts */
+
+
 
