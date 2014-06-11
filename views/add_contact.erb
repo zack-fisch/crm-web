@@ -1,9 +1,21 @@
 <h2>Please add a contact below: </h2>
 
-<form action= "/contacts" method="post"> 
-	<input type="text" name="first_name">
-	<input type="text" name="last_name">
-	<input type="email" name ="email">
-	<input type="text" name="note">
-	<input type="submit" name="Submit">
-</form>
+<div id="container">
+
+<form action= "/contacts" method="post" class="pure-form"> 
+	<fieldset class="pure-group">
+		<input type="text" name="first_name" class="pure-input-1-2" placeholder="First Name">
+		<input type="text" name="last_name" class="pure-input-1-2" placeholder="Last Name">
+		<input type="email" name ="email" class="pure-input-1-2" placeholder="Email">
+	</fieldset>
+
+	<fieldset class ="pure-group">
+		<input type="text" name="note" class="pure-input-1-2" placeholder="Note">
+	</fieldset>
+
+	<button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+
+	</form>
+</div>
+
+	

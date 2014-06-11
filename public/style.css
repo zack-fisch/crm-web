@@ -1,7 +1,8 @@
 h1 {
 	color: blue;
 	opacity: .7;
-	padding-left: 5px;
+	padding-left: .5em;
+	margin: 0 auto;
 }
 
 header {
@@ -13,4 +14,17 @@ header {
 	margin-top: -23px;
 	margin-left: -10px;
 }
+
+.pure-input-1-2 {
+	text-align: center;
+}
+
+
+/*
+form {
+	position: relative;
+  width: 600px;
+  margin: 0 auto;
+  display: block;
+} */ 
 
