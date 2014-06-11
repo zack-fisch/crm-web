@@ -20,6 +20,7 @@ h1 {
 	margin: 0 auto;
 	margin-left: -13px;
 	text-align: center;
+	min-width: 600px;
 }
 
 h2 {
@@ -33,6 +34,7 @@ nav {
 	margin-top: 10px;
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
+	min-width: 600px;
 }
 
 nav > a {
@@ -70,6 +72,7 @@ input:hover, button:hover {
 #container {
 	width: 500px;
 	margin: auto;
+	min-width: 600px;
 }
 
 a {
@@ -95,9 +98,10 @@ a:hover {
 	height: 100px;
 	background-color: rgba(52, 152, 219, .7);
 	display: inline-block;
-	margin-top: 10px;
+	margin-top: 30px;
 	text-align: center;
 	opacity: .7;
+	margin-left: 30px;
 
 }
 

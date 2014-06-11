@@ -31,7 +31,12 @@ end
 post '/contacts' do
 	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
 	@@rolodex.add_contact(new_contact)
-	# When submit button is hit, lets see if we can make a popup with the user ID, and a an okay button -> THIS redirects to /contacts
 	redirect to('/contacts')
 end
+
+post '/contacts/:id' do
+	search_contact = params[:ID]
+	puts search_contact.to_s
+	redirect to('/contacts/:id')
+	end
 

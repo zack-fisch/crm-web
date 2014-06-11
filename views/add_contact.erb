@@ -1,12 +1,12 @@
-<h2>Please add a contact below: </h2>
-
 <div id="container">
 
+	<h2>Please add a contact below: </h2>
+
 <form action= "/contacts" method="post" > 
-		<input type="text" name="first_name" placeholder="First Name">
-		<input type="text" name="last_name"  placeholder="Last Name">
+		<input type="text" name="first_name" placeholder="First Name" required>
+		<input type="text" name="last_name"  placeholder="Last Name" required>
 		<input type="email" name ="email"  placeholder="Email">
-		<input type="text" name="note" placeholder="Note">
+		<input type="text" name="note" placeholder="Note" required>
 
 
 	<button type="submit">Submit</button>
