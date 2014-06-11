@@ -3,7 +3,8 @@ require_relative 'rolodex'
 
 require 'sinatra'
 
-@@rolodex = Rolodex.new 
+@@rolodex = Rolodex.new
+@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
 
 @@crm_app_name = "Zack's CRM" #haha
 
@@ -20,8 +21,15 @@ get '/contacts/new' do
 	erb :add_contact
 end
 
+# this is not search; this is to list a specific contact (with contact :id)
+# /contacts/1000  -> show the page for contact 1000.
+# params[:id] == 1000
+
 get '/contacts/:id' do
-	erb :specific_contact
+	search_contact = params[:id].to_i 
+	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
+
+	erb :contact
 end
 
 get '/contacts/:id/edit' do
