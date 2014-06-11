@@ -5,11 +5,11 @@ require 'sinatra'
 
 @@rolodex = Rolodex.new 
 
-@@crm_app_name = "Zack's CRM" #lol.
+@@crm_app_name = "Zack's CRM" #haha
 
 #Routes start here
 get '/' do
-	@time = Time.now
+	@time = Time.now.asctime
 	erb :index
 end
 
