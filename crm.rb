@@ -9,7 +9,7 @@ require 'sinatra'
 @@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
 @@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
 
-@@crm_app_name = "Rolo"
+@@crm_app_name = "Rollo"
 
 #Routes start here
 get '/' do
@@ -29,6 +29,7 @@ end
 # params[:id] == 1000
 
 get '/contacts/:id' do
+	# search contact = an integer that is id input in the URL
 	search_contact = params[:id].to_i 
 	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
 	if @display_contact
@@ -69,3 +70,13 @@ put '/contacts/:id' do
 	end
 end
 
+delete "/contacts/:id" do
+	search_contact = params[:id].to_i 
+	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
+	if @display_contact
+		@@rolodex.remove_contact(@display_contact)
+		redirect to("/contacts")
+	else
+		raise Sinatra::NotFound
+	end
+end

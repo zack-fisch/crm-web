@@ -3,3 +3,8 @@
 <ul id="contact-center">
 	<li><%= @display_contact.first_name %> <%= @display_contact.last_name %> <hr> <%= @display_contact.email %> <br> Note: <%= @display_contact.note %> <br> ID: <%= @display_contact.id %></li>
 </ul>
+
+<form action="/contacts/<%= @display_contact.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" name="Delete Contact" value="Delete Contact" id="delete">
+</form>

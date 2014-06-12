@@ -15,5 +15,10 @@ class Rolodex
 		@counter += 1
 	end
 
+	def remove_contact(contact)
+		@contacts.delete(contact)
+		@counter -= 1
+	end
+
 end
 

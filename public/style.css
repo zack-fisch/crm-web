@@ -136,4 +136,11 @@ ul {
 	-webkit-margin-after: 0em;
 }
 
+#delete:hover {
+	opacity: .7;
+	background-color: #ecf0f1;
+	cursor: pointer;
+
+}
+
 
