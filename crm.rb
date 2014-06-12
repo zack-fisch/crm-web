@@ -38,8 +38,16 @@ get '/contacts/:id' do
 	end
 end
 
+
 get '/contacts/:id/edit' do
-	erb :edit_specific_contact
+	puts params
+	search_contact = params[:id].to_i 
+	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
+	if @display_contact
+		erb :edit_specific_contact
+	else 
+		raise Sinatra::NotFound
+	end
 end 
 
 post '/contacts' do
