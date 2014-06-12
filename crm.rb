@@ -4,12 +4,10 @@ require_relative 'rolodex'
 require 'sinatra'
 
 @@rolodex = Rolodex.new
-@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
-@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
-@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
-@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
-@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
-@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
+@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
+@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
+@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
+@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
 
 @@crm_app_name = "Rolo"
 
@@ -33,7 +31,11 @@ end
 get '/contacts/:id' do
 	search_contact = params[:id].to_i 
 	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
-	erb :contact
+	if @display_contact
+		erb :contact
+	else 
+		raise Sinatra::NotFound
+	end
 end
 
 get '/contacts/:id/edit' do
@@ -46,9 +48,9 @@ post '/contacts' do
 	redirect to('/contacts')
 end
 
-post '/contacts/:id' do
-	search_contact = params[:ID]
-	puts search_contact.to_s
-	redirect to('/contacts/:id')
-	end
+# post '/contacts/:id' do
+# 	search_contact = params[:ID]
+# 	puts search_contact.to_s
+# 	redirect to('/contacts/:id')
+# end
 
