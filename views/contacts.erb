@@ -1,11 +1,17 @@
 <h2>All Contacts</h2>
 
-<ul>
-<% @@rolodex.contacts.each do |contact| %>
-	<div class="contactcards">
-		<li><%= contact.first_name %> <%= contact.last_name %> <hr> <%= contact.email %> <br> Note: <%= contact.note %> <br> ID: <%= contact.id %></li>
-	</div>
+<% number = @@rolodex.counter > 1 ? "contacts" : "contact" %>
+<h2>You have <%= "#{@@rolodex.counter} #{number}" %>.</h2>
 
-<% end %>
 
+<ul class="contacts-list">
+	<% @@rolodex.contacts.each do |contact| %>
+		<li class="contactcards">
+			<div></div>
+			<%= contact.first_name %> <%= contact.last_name %> <hr> 
+			<%= contact.email %> <br> 
+			Note: <%= contact.note %> <br> 
+			ID: <%= contact.id %>
+		</li>
+	<% end %>
 </ul>

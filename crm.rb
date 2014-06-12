@@ -5,6 +5,11 @@ require 'sinatra'
 
 @@rolodex = Rolodex.new
 @@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
+@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
+@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
+@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
+@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
+@@rolodex.add_contact(Contact.new('ryan', 'ming', 'nunya@business.com', 'note'))
 
 @@crm_app_name = "Rolo"
 
@@ -28,7 +33,6 @@ end
 get '/contacts/:id' do
 	search_contact = params[:id].to_i 
 	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
-
 	erb :contact
 end
 
