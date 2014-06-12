@@ -40,7 +40,6 @@ end
 
 
 get '/contacts/:id/edit' do
-	puts params
 	search_contact = params[:id].to_i 
 	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
 	if @display_contact
@@ -56,9 +55,17 @@ post '/contacts' do
 	redirect to('/contacts')
 end
 
-# post '/contacts/:id' do
-# 	search_contact = params[:ID]
-# 	puts search_contact.to_s
-# 	redirect to('/contacts/:id')
-# end
+put '/contacts/:id' do
+	search_contact = params[:id].to_i 
+	@display_contact = @@rolodex.contacts.find {|contact| contact.id == search_contact }
+	if @display_contact
+		@display_contact.first_name = params[:first_name]
+		@display_contact.last_name = params[:last_name]
+		@display_contact.email = params[:email]
+		@display_contact.note = params[:note]
+	  redirect to('/contacts')
+	else
+		raise Sinatra::NotFound
+	end
+end
 
