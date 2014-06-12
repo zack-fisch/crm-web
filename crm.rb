@@ -4,10 +4,7 @@ require_relative 'rolodex'
 require 'sinatra'
 
 @@rolodex = Rolodex.new
-@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
-@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
-@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
-@@rolodex.add_contact(Contact.new('Holly', 'Bear', 'Holly@bear.com', 'note'))
+
 
 @@crm_app_name = "Rollo"
 
