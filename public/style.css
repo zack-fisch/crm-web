@@ -72,10 +72,10 @@ nav a {
 	color: white;
 	opacity: .7;
 	text-decoration: none;
-	transition: color 2s ease;
+	transition: color 1s ease;
 }
 
-a:hover {
+nav a:hover {
 		color: black;
 }
 
@@ -105,6 +105,14 @@ a:hover {
 	color: white;
 }
 
+.contactcards:hover {
+	opacity: 1;
+}
+
+#inline-contacts {
+	display: inline-block;
+}
+
 /* End List of Contacts */
 
 /* Start display indvidiual contact */
@@ -128,7 +136,7 @@ a:hover {
 
 ul {
 	-webkit-padding-start: 0;
-	-webkit-margin-after: 0em;
+	-webkit-margin-after: 0;
 }
 
 .hover:hover {
@@ -137,5 +145,6 @@ ul {
 	cursor: pointer;
 
 }
+
 
 
